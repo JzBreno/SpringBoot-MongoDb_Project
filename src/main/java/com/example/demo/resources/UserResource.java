@@ -1,7 +1,5 @@
 package com.example.demo.resources;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +20,7 @@ public class UserResource {
 	private UserService service;
 	@GetMapping
 	public ResponseEntity<List<User>> findAll(){
-		
-	
 		List<User> users = service.findAll();
-		
 		return ResponseEntity.ok().body(users);
 		
 	}
