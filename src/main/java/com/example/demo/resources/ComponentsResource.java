@@ -15,7 +15,7 @@ import com.example.demo.services.ComponentsService;
 //controller do component, serve para gerenciar as requisições http e retornar as requisições apropriadas
 //essa classe tem retornos json ou xml
 @RestController
-@RequestMapping(value="/component")
+@RequestMapping(value="/components")
 public class ComponentsResource {
 	//essa marcacao instancia a classe diretamente para que possamos usar as regras
 	//nao se precisa istanciar diretamente e ja se pode usar os metodos
