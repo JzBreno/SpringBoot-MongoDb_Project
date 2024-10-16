@@ -11,6 +11,7 @@ import com.example.demo.repository.ComponentsRepository;
 //essa classe trata em promeira mao com a classe que gerencia os repositorios
 @Service
 public class ComponentsService {
+	//
 	@Autowired
 	private ComponentsRepository repo;
 	

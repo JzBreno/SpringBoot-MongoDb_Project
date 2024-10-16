@@ -19,13 +19,14 @@ import com.example.demo.services.ComponentsService;
 public class ComponentsResource {
 	//essa marcacao instancia a classe diretamente para que possamos usar as regras
 	//nao se precisa istanciar diretamente e ja se pode usar os metodos
+	
 	@Autowired
 	private ComponentsService service;
 	//metodo para buscar os componentes
 	//quando se faz um requisicao para /components ele exerce esse metodo
 	@GetMapping
 	public ResponseEntity<List<Component>> findAll(){
-		//insanciando uma lista com o retorno da nossa classe que busca na base de dados
+		//instanciando uma lista com o retorno da nossa classe que busca na base de dados
 		List<Component> components = service.findAll();
 		//retorna uma respota http com 200ok para nosso metodo chamado
 		return ResponseEntity.ok().body(components);
