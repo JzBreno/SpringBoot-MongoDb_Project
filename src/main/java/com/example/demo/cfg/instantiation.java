@@ -21,6 +21,7 @@ public class instantiation implements CommandLineRunner{
 	//metodo para inicializar as inserções das nossas entidades
 	@Override
 	public void run(String... args) throws Exception {
+		
 		// TODO Auto-generated method stub
 		//deletando o que tiver salvo no banco 
 		userRepository.deleteAll();
@@ -29,6 +30,7 @@ public class instantiation implements CommandLineRunner{
 		User maria = new User(null, "maria brown", "maria@gmail.com");
 		User joe = new User(null, "joe brown", "joe@gmail.com");
 		Component motherBoard = new Component(null, "mother board Asus","placa mae de alta qaulidade ddr4");
+		
 		//tratando possiveis erros
 		try {
 			//salvando todos as nossas entidades passando como referencia ao nossos xRepository
