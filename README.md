@@ -7,3 +7,5 @@ Testando metodo get d_retamente do Mongo LocalHost:
 
 implementado a inserção no mongodb apartir do spring 
 ![image](https://github.com/user-attachments/assets/2980ad56-0531-42b3-bc79-c2eed3e93990)
+implementado metodo de busca por ID
+![image](https://github.com/user-attachments/assets/8ca39b3d-f0e7-44df-9e56-d68c0163138f)
