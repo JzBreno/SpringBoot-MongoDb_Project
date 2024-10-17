@@ -1,6 +1,7 @@
 package com.example.demo.resources;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.domain.User;
+import com.example.demo.dto.UserDTO;
 import com.example.demo.services.UserService;
 
 
@@ -23,9 +25,14 @@ public class UserResource {
 	@Autowired
 	private UserService service;
 	@GetMapping
-	public ResponseEntity<List<User>> findAll(){
+	public ResponseEntity<List<UserDTO>> findAll(){
 		List<User> users = service.findAll();
-		return ResponseEntity.ok().body(users);
+		//transformando um alista do tipo User em UserDTO
+		                        //aqui transforma em uma lista que se pode usar o metodo lambda
+		                                          //insercao do metodo lambda
+		                                                               //aqui reconverte ao tipo lista
+		List<UserDTO> listDto = users.stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
+		return ResponseEntity.ok().body(listDto);
 		
 	}
 	
