@@ -7,5 +7,7 @@ import com.example.demo.domain.User;
 //essaninterface extend de outra interface que herda funcoes pre definidas em MongoRepository
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
+
+	
 	//herda
 }
